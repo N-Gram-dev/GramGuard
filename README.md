@@ -38,7 +38,10 @@ cd Ngram_DetectGPT
 
 ```bash
 python3 -m venv env
-source env/bin/activate      # On Windows: env\Scripts\activate
+# macOS/Linux:
+source env/bin/activate
+# Windows:
+env\Scripts\activate
 ```
 
 ### 3. Install Python Dependencies
