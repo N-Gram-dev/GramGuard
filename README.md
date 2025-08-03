@@ -1,13 +1,13 @@
-# 🔍 NGram-DetectGPT: AI Text Detection using N-Gram Delta Features
+# NGram-DetectGPT
 
-This project implements a robust detection pipeline to distinguish AI-generated text from human-written content using classical n-gram language models (KenLM) and perturbation-based delta features. It includes paraphrase generation, n-gram scoring, feature extraction, classifier training, evaluation, and result visualization.
-
+Ngram_DetectGPT is a Python-based tool for detecting AI-generated text using statistical differences in n-gram usage. It was originally developed research study (current for AAAI-26 submission anonymously for review purpose) on delta-based detection using n-gram statistics. Given a piece of text, this work computes features from multiple n-gram language models (2-gram through 5-gram) and uses a trained classifier to determine if the text was likely produced by a large language model (e.g. GPT) or by a human. This approach leverages pre-trained n-gram models to measure how surprising or divergent the text is at different levels (bigram, trigram, etc.), and then classifies the text based on these signals. The goal is to provide a simple, training-free method to identify AI-generated content by analyzing its distribution of word sequences.
 ---
 
 ## 📁 Repository Structure
 
 ```
 Ngram_DetectGPT/
+├── Scripts                           # Include All .py files. Orignal CSV of text and variants CSV's if you want to skip generation you can use same structure of files to start from extract_features_kenlm.py becuase for generate_variants_chatgpt need API. 
 ├── generate_variants_chatgpt.py      # Paraphrase generation using GPT-4 API
 ├── extract_features_kenlm.py         # Computes n-gram delta features
 ├── train_classifier.py               # Trains XGBoost classifiers
@@ -16,7 +16,7 @@ Ngram_DetectGPT/
 ├── ablation_study.py                 # Runs feature ablation experiments
 ├── plot_figures.py                   # Creates accuracy and AUC plots
 ├── models/                           # Pretrained KenLM models (2-gram to 5-gram)
-├── datasets/                         # Input CSVs (original texts)
+├── datasets/                         # Json files (original texts)
 ├── output/                           # Paraphrased variants per temperature
 ├── N-gram Scoring/                   # Feature CSVs with delta scores
 ├── results/                          # Evaluation metrics, plots, summaries
@@ -47,7 +47,7 @@ source env/bin/activate      # On Windows: env\Scripts\activate
 pip install -r requirements.txt
 ```
 
-If you don’t have the `requirements.txt` yet, create one with the content below 👇
+Make sure you have Python 3.x installed (Python 3.8 or higher is recommended). The required Python packages are listed below. If you don’t have the `requirements.txt` yet, create one with the content below 👇
 
 ---
 
