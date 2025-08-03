@@ -1,6 +1,11 @@
-numpy
 pandas
-scikit-learn
-xgboost
-kenlm
+numpy
+scipy
+nltk
+openai
 tqdm
+kenlm
+xgboost
+scikit-learn
+matplotlib
+seaborn
