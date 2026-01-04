@@ -1,6 +1,6 @@
-# NGram-DetectGPT
+#GramGuard
 
-Ngram_DetectGPT is a Python-based tool for detecting AI-generated text using statistical differences in n-gram usage. It was originally developed research study (current for ICLR-26 submission anonymously for review purpose) on delta-based detection using n-gram statistics. Given a piece of text, this work computes features from multiple n-gram language models (2-gram through 5-gram) and uses a trained classifier to determine if the text was likely produced by a large language model (e.g. GPT) or by a human. This approach leverages pre-trained n-gram models to measure how surprising or divergent the text is at different levels (bigram, trigram, etc.), and then classifies the text based on these signals. The goal is to provide a simple, training-free method to identify AI-generated content by analyzing its distribution of word sequences.
+GramGuard is a Python-based tool for detecting AI-generated text using statistical differences in n-gram usage. It was originally developed research study (current for ACL-26 submission anonymously for review purpose) on delta-based detection using n-gram statistics. Given a piece of text, this work computes features from multiple n-gram language models (2-gram through 5-gram) and uses a trained classifier to determine if the text was likely produced by a large language model (e.g. GPT) or by a human. This approach leverages pre-trained n-gram models to measure how surprising or divergent the text is at different levels (bigram, trigram, etc.), and then classifies the text based on these signals. The goal is to provide a simple, training-free method to identify AI-generated content by analyzing its distribution of word sequences.
 ---
 
 ## Repository Structure
@@ -77,8 +77,7 @@ seaborn
 You must download 4 pre-trained n-gram models (2-gram to 5-gram) into a folder named `models/` in the repo root.
 
 ###  Source:
-👉 https://huggingface.co/NGramDev/ngram-detect-models
-
+👉 for annoymous purpose we can't provide hugging face link to our repository but after camera ready version we will provide link here. 
 ###  Files to download:
 
 - `2-gram.arpa.bin`
